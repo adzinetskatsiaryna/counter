@@ -1,37 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import classes from './button.module.css'
 
 
 
-class App extends React.Component {
-    click = React.createRef()
 
-state = {
-    counter:0,
-    maxValue:10,
-    minValue: 0
-}
-addCounter =()=>{
-        if(this.state.counter < this.state.maxValue){
-    this.setState({counter:++this.state.counter})}
-}
-resetCounter=()=>{
-    this.setState({counter:this.state.counter=this.state.minValue})
-}
+class Button extends React.Component {
+
 
     render = () => {
 
+        let buttonDisebled = this.props.counter===this.props.maxValue
+        let buttonResetDisebled = this.props.counter === this.props.minValue
+
         return (
-            <div className='App'>
-                <div className='display'>
-                   <span ref={this.click}>{this.state.counter}</span>
-                    <button onClick={addCounter}>onn</button>
-                    <button onClick={resetCounter}>add</button>
-                </div>
+            <div className={classes.buttnClass}>
+                    <button onClick={this.props.addCounter} disabled={buttonDisebled}>onn</button>,
+                    <button onClick={this.props.resetCounter} disabled={buttonResetDisebled}>reset</button>
             </div>
         );
     }
 }
 
-export default App;
+export default Button;

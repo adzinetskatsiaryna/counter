@@ -1,36 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from "./Button";
+import classes from './counter.module.css'
 
 
 
-class App extends React.Component {
+class Display extends React.Component {
 
-state = {
-    counter:0,
-    maxValue:10,
-    minValue: 0
-}
-addCounter =()=>{
-        if(this.state.counter < this.state.maxValue){
-    this.setState({counter:++this.state.counter})}
-}
-resetCounter=()=>{
-    this.setState({counter:this.state.counter=this.state.minValue})
-}
 
     render = () => {
 
+        let error = this.props.counter === this.props.maxValue ? classes.error : '';
         return (
-            <div className='App'>
-                <div className='display'>
-                   <span>{this.state.counter}</span>
-                   <Button />
-                </div>
+            <div className={classes.counter}>
+                   <span className={ `spanCounter + ${error}`}>{this.props.counter}</span>
             </div>
         );
     }
 }
 
-export default App;
+export default Display;
