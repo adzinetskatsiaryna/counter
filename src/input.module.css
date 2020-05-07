@@ -1,0 +1,7 @@
+.inputWrapper{
+  display: flex;
+}
+input{
+  margin-bottom: 30px;
+  margin-left: 5px;
+}

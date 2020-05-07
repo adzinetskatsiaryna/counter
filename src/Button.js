@@ -10,15 +10,15 @@ class Button extends React.Component {
 
 
     render = () => {
-
-        let buttonDisebled = this.props.counter===this.props.maxValue
-        let buttonResetDisebled = this.props.counter === this.props.minValue
-
         return (
-            <div className={classes.buttnClass}>
-                    <button onClick={this.props.addCounter} disabled={buttonDisebled}>onn</button>,
-                    <button onClick={this.props.resetCounter} disabled={buttonResetDisebled}>reset</button>
-            </div>
+            <input
+                type='button'
+                value={this.props.value}
+                disabled={this.props.disabled}
+                onClick={this.props.onClick}
+                className={this.props.className}
+                counter={this.props.counter}
+            />
         );
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import classes from './counter.module.css'
+import styles from './counter.module.css'
 
 
 
@@ -10,10 +10,11 @@ class Display extends React.Component {
 
     render = () => {
 
-        let error = this.props.counter === this.props.maxValue ? classes.error : '';
+        let name = (this.props.valueMaxMin && 'Incorrect value') || (this.props.onSet === false && 'Enter value end press set')|| this.props.counter;
+        let styleMaxValue = this.props.counter===this.props.maxValue || this.props.valueMaxMin  ? styles.maxValue : styles.spanCounter;
         return (
-            <div className={classes.counter}>
-                   <span className={ `spanCounter + ${error}`}>{this.props.counter}</span>
+            <div className={styles.counter}>
+                   <span className={styleMaxValue}>{name}</span>
             </div>
         );
     }

@@ -2,15 +2,18 @@
 span{
   max-width: 50px;
   border: 1px solid #000000;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 20px 40px;
 }
 .counter{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .spanCounter{
      color: black;
 }
-.error{
+.maxValue{
   color: red;
+  font-size: 20px;
+  font-weight: bold;
 }
