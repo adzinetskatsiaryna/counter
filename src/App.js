@@ -13,8 +13,8 @@ class App extends React.Component {
 
 state = {
     counter:0,
-    maxValue:0,
-    minValue: 0,
+    maxValue: 5,
+    minValue: 1,
     onSet: false,
 };
 
@@ -83,7 +83,6 @@ resetCounter=()=>{
                        maxValue = {this.state.maxValue}
                        minValue = {this.state.minValue}
                        onSet = {this.state.onSet}
-                       valueMaxMin={ErrorMaxValue || ErrorMinValue}
                    />
 
                    <Buttons
