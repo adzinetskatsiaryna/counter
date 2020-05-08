@@ -12,11 +12,12 @@ class Input extends React.Component {
     render = () => {
         return (
             <div className={styles.inputWrapper}>
-                <div>{this.props.title}</div>
+                <div className={styles.title}>{this.props.title}</div>
                 <input
                     type='number'
                     value={this.props.value}
                     onFocus={this.props.set}
+                    // autoFocus={true}
                     onChange={this.props.set}
                     className={this.props.className}
                 />

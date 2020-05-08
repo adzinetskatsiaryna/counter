@@ -4,8 +4,11 @@
 input{
   border: 3px solid rgba(0,0,0,0.5);
   margin-bottom: 30px;
-  margin-left: 5px;
   background-color: #fdeeff;
   padding: 5px 0px;
   text-align: center;
+}
+.title{
+  margin: 0 10px 0 0;
+  font-weight: bold;
 }
